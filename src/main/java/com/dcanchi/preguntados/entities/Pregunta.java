@@ -1,12 +1,17 @@
 package com.dcanchi.preguntados.entities;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -25,7 +30,10 @@ public class Pregunta {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_Categoria", referencedColumnName = "idCategoria")
 	private Categoria categoria;
-	
+
+    @OneToMany
+    @JoinColumn(name = "id_opcion")
+	private List<Opcion>lstOpciones;
 	
 	public Pregunta() {
 	}
@@ -58,6 +66,14 @@ public class Pregunta {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+	public List<Opcion> getLstOpciones() {
+		return lstOpciones;
+	}
+
+
+	public void setLstOpciones(List<Opcion> lstOpciones) {
+		this.lstOpciones = lstOpciones;
 	}
 
 	
