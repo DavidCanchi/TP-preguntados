@@ -20,4 +20,8 @@ public class CategoriaController {
     public ArrayList<Categoria> getAllCategorias() {
 		return this.categoriaService.getAllCategorias();
     }
+	@GetMapping("/{id}")
+    public Categoria getCategoria(Long id) {
+		return this.categoriaService.getCategoria(id);
+    }
 }

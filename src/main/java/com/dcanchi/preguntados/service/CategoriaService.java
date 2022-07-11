@@ -9,6 +9,8 @@ import com.dcanchi.preguntados.entities.Categoria;
 
 public interface CategoriaService {
 	public  ArrayList<Categoria> getAllCategorias();
+
+	public Categoria getCategoria(Long id);
 	
 
 }

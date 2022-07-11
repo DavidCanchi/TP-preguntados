@@ -14,20 +14,20 @@ public class Categoria {
 	@Id
     @Column(name = "idcategoria")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long categoria_id;
+    private Long idCategoria;
 
-    @Column(name = "nombreCategoria", nullable = false)
+    @Column(name = "nombre_Categoria")
     private String nombre;
 
-    @Column(name = "descripcion", nullable = false)
+    @Column(name = "descripcion")
     private String descripcion;
 
-	public Long getCategoria_id() {
-		return categoria_id;
+	public Long getIdCategoria() {
+		return idCategoria;
 	}
 
-	public void setCategoria_id(Long categoria_id) {
-		this.categoria_id = categoria_id;
+	public void setIdCategoria(Long idCategoria) {
+		this.idCategoria = idCategoria;
 	}
 
 	public String getNombre() {
@@ -45,7 +45,8 @@ public class Categoria {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-    
+
+
     
     
     

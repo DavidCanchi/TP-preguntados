@@ -12,8 +12,15 @@ import com.dcanchi.preguntados.service.CategoriaService;
 public class CategoriaServiceImpl implements CategoriaService {
 	@Autowired
 	private CategoriaRepository categoriaRepository;
-
+	
+	@Override
 	public ArrayList<Categoria> getAllCategorias(){		
        return (ArrayList<Categoria>) categoriaRepository.findAll(); //implementar repository	
     }
+	
+	public Categoria getCategoria(Long id) {
+		return categoriaRepository.findById(id).get();
+	}
+	
+	
 }
