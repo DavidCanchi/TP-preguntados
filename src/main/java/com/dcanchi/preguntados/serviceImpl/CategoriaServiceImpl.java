@@ -21,6 +21,20 @@ public class CategoriaServiceImpl implements CategoriaService {
 	public Categoria getCategoria(Long id) {
 		return categoriaRepository.findById(id).get();
 	}
+
+	@Override
+	public void save(Categoria categoria) {
+		categoriaRepository.save(categoria);
+		
+	}
+
+	@Override
+	public void deleteById(Long id) {
+		categoriaRepository.deleteById(id);
+		
+	}
+	
+	
 	
 	
 }
