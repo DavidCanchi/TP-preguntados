@@ -27,13 +27,13 @@ public class Pregunta {
 	//relacion con Entity
 	
 	//private Long idCategoria;
-    @OneToOne(cascade = CascadeType.ALL)
+  /*  @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_Categoria", referencedColumnName = "idCategoria")
 	private Categoria categoria;
 
     @OneToMany
     @JoinColumn(name = "id_opcion")
-	private List<Opcion>lstOpciones;
+	private List<Opcion>lstOpciones;*/
 	
 	public Pregunta() {
 	}
@@ -59,7 +59,7 @@ public class Pregunta {
 	}
 
 
-	public Categoria getCategoria() {
+	/*public Categoria getCategoria() {
 		return categoria;
 	}
 
@@ -75,7 +75,7 @@ public class Pregunta {
 	public void setLstOpciones(List<Opcion> lstOpciones) {
 		this.lstOpciones = lstOpciones;
 	}
-
+*/
 	
 	
 
